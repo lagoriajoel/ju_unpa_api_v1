@@ -62,6 +62,11 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
                 .antMatchers("/disciplinas/list").permitAll()
                 .antMatchers("/programs/listOfSport/{id}").permitAll()
                 .antMatchers("/teams/listOfSport/{id}").permitAll()
+                .antMatchers("/info/list").permitAll()
+                .antMatchers("/info/list/{id}").permitAll()
+                .antMatchers("/location/list/{id}").permitAll()
+
+
                 .anyRequest().authenticated()
                 .and()
                 .exceptionHandling().authenticationEntryPoint(jwtEntryPoint)
