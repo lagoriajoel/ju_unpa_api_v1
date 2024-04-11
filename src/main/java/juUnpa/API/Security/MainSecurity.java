@@ -64,7 +64,7 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
                 .antMatchers("/teams/listOfSport/{id}").permitAll()
                 .antMatchers("/info/list").permitAll()
                 .antMatchers("/info/list/{id}").permitAll()
-                .antMatchers("/location/list/{id}").permitAll()
+                .antMatchers("/location/list").permitAll()
 
 
                 .anyRequest().authenticated()
